@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+behave = "*"
+behave-cucumber-matcher = "*"
+selenium = "==4.9.0"
+webdriver-manager = "*"
+sure = "*"
+flake8 = "*"
+trio = "==0.27.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
+
+[packages.py_prism]
+git = "https://github.com/l1tro1/py_prism"
