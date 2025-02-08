@@ -1,10 +1,10 @@
+from py_prism import Section, Element, Sections
 from selenium.webdriver.common.by import By
 
 from features.support.page_object.pages.root_page import Root
 from features.support.page_object.sections import (BreadcrumbsSection, DescriptionSection,
                                                    ListItemSection, ReleaseListItemSection,
                                                    SearchFilterButtonSection, SearchFilterSection)
-from py_prism import Section, Element, Sections
 
 
 class Catalog(Root):

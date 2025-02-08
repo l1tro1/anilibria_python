@@ -1,15 +1,16 @@
-import re
+# Нужно для работы Monkeypatch'ей
+import locale
 
+import re
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
-from features.support.logger import logger
+from webdriver_manager.chrome import ChromeDriverManager
 
 from features.support.file_system.tmp import save_screenshot
+from features.support.logger import logger
 from features.support.page_object import matcher_loaders, matcher_pages, PageFactory
 # Нужно для работы Monkeypatch'ей
 import features.support.monkeypatch.webdriver
-import locale
 
 # Нужно для корректной работы datetime.datetime.today().weekday()
 locale.setlocale(locale.LC_ALL, "ru_RU.UTF-8")

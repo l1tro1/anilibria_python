@@ -1,5 +1,6 @@
-import os
 import datetime
+import os
+
 from features.support.logger import logger
 
 

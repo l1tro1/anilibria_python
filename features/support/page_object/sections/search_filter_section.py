@@ -1,6 +1,7 @@
-from selenium.webdriver.common.by import By
-from features.support.page_object.sections import FilterSection
 from py_prism import PageSection, Section, Elements
+from selenium.webdriver.common.by import By
+
+from features.support.page_object.sections import FilterSection
 
 
 class SearchFilterSection(PageSection):

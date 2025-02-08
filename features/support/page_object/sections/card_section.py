@@ -1,6 +1,5 @@
-from selenium.webdriver.common.by import By
-
 from py_prism import PageSection, Elements, Element
+from selenium.webdriver.common.by import By
 
 
 class CardSection(PageSection):

@@ -1,7 +1,7 @@
+from py_prism import PageSection, Sections
 from selenium.webdriver.common.by import By
 
 from features.support.page_object.sections import FilterPartSection
-from py_prism import PageSection, Sections
 
 
 class FilterSection(PageSection):

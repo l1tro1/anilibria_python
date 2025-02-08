@@ -1,6 +1,5 @@
-from selenium.webdriver.common.by import By
-
 from py_prism import Element, PageSection
+from selenium.webdriver.common.by import By
 
 
 class ReleaseListItemSection(PageSection):

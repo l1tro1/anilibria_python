@@ -1,7 +1,7 @@
+from py_prism import PageSection, Sections
 from selenium.webdriver.common.by import By
 
 from features.support.page_object.sections.footer_column_section import FooterColumnSection
-from py_prism import PageSection, Sections
 
 
 class FooterSection(PageSection):

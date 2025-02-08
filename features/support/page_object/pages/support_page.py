@@ -1,8 +1,8 @@
+from py_prism import Section
 from selenium.webdriver.common.by import By
 
 from features.support.page_object.pages.root_page import Root
 from features.support.page_object.sections import BreadcrumbsSection, DescriptionSection
-from py_prism import Section
 
 
 class Support(Root):

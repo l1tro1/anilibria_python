@@ -1,11 +1,12 @@
 import time
 from http.cookiejar import LoadError
+
+from py_prism import Page, Element, Section
 from selenium.webdriver.common.by import By
 
-from features.support.page_object.sections.footer_section import FooterSection
-from py_prism import Page, Element, Section
-from features.support.page_object.sections.header_section import HeaderSection
 from features.support.logger import logger
+from features.support.page_object.sections.footer_section import FooterSection
+from features.support.page_object.sections.header_section import HeaderSection
 
 
 class Root(Page):

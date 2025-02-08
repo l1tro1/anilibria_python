@@ -1,10 +1,12 @@
+import calendar
+import datetime
 import re
+
 # Нужно для работы equal
 import sure
 from behave import step
-import datetime
-import calendar
 from selenium.common import NoSuchElementException
+
 from features.support.logger import check_element
 
 

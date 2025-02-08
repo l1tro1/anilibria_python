@@ -1,8 +1,8 @@
+from py_prism import Section, Element, Sections, Elements
 from selenium.webdriver.common.by import By
 
 from features.support.page_object.pages.root_page import Root
 from features.support.page_object.sections import BreadcrumbsSection, CardSection, DescriptionSection, ListItemSection
-from py_prism import Section, Element, Sections, Elements
 
 
 class Schedule(Root):

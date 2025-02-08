@@ -1,6 +1,6 @@
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
 from py_prism import PageSection, Element, Elements
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
 
 
 class FilterPartSection(PageSection):
