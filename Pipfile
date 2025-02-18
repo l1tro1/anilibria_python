@@ -11,6 +11,7 @@ webdriver-manager = "*"
 sure = "*"
 flake8 = "*"
 trio = "==0.27.0"
+pytest = "*"
 
 [dev-packages]
 

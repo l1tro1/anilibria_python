@@ -1,0 +1,569 @@
+[
+  {
+    "path": "/accounts/otp/get",
+    "method": "post",
+    "description": "Запрашиваем новый одноразовый пароль",
+    "body": {
+      "properties": {
+        "device_id": {
+          "type": "string",
+          "example": "n702175b-fa52-5251-a39z-d1f4af0w1cak"
+        }
+      },
+      "type": "object"
+    }
+  },
+  {
+    "path": "/accounts/otp/accept",
+    "method": "post",
+    "description": "Присоединяем пользователя к одноразовому паролю",
+    "body": {
+      "properties": {
+        "code": {
+          "type": "integer",
+          "example": "054233"
+        }
+      },
+      "type": "object"
+    }
+  },
+  {
+    "path": "/accounts/otp/login",
+    "method": "post",
+    "description": "Авторизуемся по одноразовому паролю",
+    "body": {
+      "properties": {
+        "code": {
+          "type": "integer",
+          "example": "054233"
+        },
+        "device_id": {
+          "type": "string",
+          "example": "n702175b-fa52-5251-a39z-d1f4af0w1cak"
+        }
+      },
+      "type": "object"
+    }
+  },
+  {
+    "path": "/accounts/users/auth/login",
+    "method": "post",
+    "description": "Авторизация пользователя по логину и паролю. Создание сессии пользователя, выдача токена авторизации для использования в cookies или в Bearer Token",
+    "body": {
+      "properties": {
+        "login": {
+          "type": "string",
+          "example": "animeshnik_488"
+        },
+        "password": {
+          "type": "string",
+          "example": "password"
+        }
+      },
+      "type": "object"
+    }
+  },
+  {
+    "path": "/accounts/users/auth/social/{provider}/login",
+    "method": "get",
+    "description": "Позволяет авторизовать пользователя через некоторые социальные сети",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/auth/social/authenticate",
+    "method": "get",
+    "description": "Позволяет аутентифицировать авторизованного через социальную сеть пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/auth/logout",
+    "method": "post",
+    "description": "Деавторизовать пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/auth/password/forget",
+    "method": "post",
+    "description": "Отправление ссылки на восстановление забытого пароля",
+    "body": {
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "my_cool_anime_email@example.com"
+        }
+      },
+      "type": "object"
+    }
+  },
+  {
+    "path": "/accounts/users/auth/password/reset",
+    "method": "post",
+    "description": "Сброс и установка нового пароля",
+    "body": {
+      "properties": {
+        "token": {
+          "type": "string",
+          "example": "token_from_email"
+        },
+        "password": {
+          "type": "string",
+          "example": "myNewCoolPassword"
+        },
+        "password_confirmation": {
+          "type": "string",
+          "example": "myNewCoolPassword"
+        }
+      },
+      "type": "object"
+    }
+  },
+  {
+    "path": "/accounts/users/me/collections/references/age-ratings",
+    "method": "get",
+    "description": "Возвращает список возрастных рейтингов в коллекциях текущего пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/collections/references/genres",
+    "method": "get",
+    "description": "Возвращает список жанров в коллекциях текущего пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/collections/references/types",
+    "method": "get",
+    "description": "Возвращает список типов в коллекциях текущего пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/collections/references/years",
+    "method": "get",
+    "description": "Возвращает список годов в коллекциях текущего пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/collections/ids",
+    "method": "get",
+    "description": "Возвращает данные по идентификаторам релизов и типов коллекций авторизованного пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/collections/releases",
+    "method": "get",
+    "description": "Возвращает данные по релизам из определенной коллекции авторизованного пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/collections/releases",
+    "method": "post",
+    "description": "Возвращает данные по релизам из определенной коллекции авторизованного пользователя",
+    "body": {
+      "type": "object"
+    }
+  },
+  {
+    "path": "/accounts/users/me/collections",
+    "method": "post",
+    "description": "Добавляет релизы в соответствующие коллекции авторизованного пользователя",
+    "body": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "release_id": {
+            "type": "number"
+          },
+          "type_of_collection": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    }
+  },
+  {
+    "path": "/accounts/users/me/collections",
+    "method": "delete",
+    "description": "Удаляет релизы из соответствующих коллекций авторизованного пользователя",
+    "body": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "release_id": {
+            "type": "number"
+          }
+        },
+        "type": "object"
+      }
+    }
+  },
+  {
+    "path": "/accounts/users/me/favorites/references/age-ratings",
+    "method": "get",
+    "description": "Возвращает список возрастных рейтингов в избранном текущего пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/favorites/references/genres",
+    "method": "get",
+    "description": "Возвращает список жанров в избранном текущего пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/favorites/references/sorting",
+    "method": "get",
+    "description": "Возвращает список опций сортировки в избранном текущего пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/favorites/references/types",
+    "method": "get",
+    "description": "Возвращает список типов релизов в избранном текущего пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/favorites/references/years",
+    "method": "get",
+    "description": "Возвращает список годов выхода релизов в избранном текущего пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/favorites/ids",
+    "method": "get",
+    "description": "Возвращает данные по идентификаторам релизов из избранного авторизованного пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/favorites/releases",
+    "method": "get",
+    "description": "Возвращает данные по релизам из избранного текущего пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/favorites/releases",
+    "method": "post",
+    "description": "Возвращает данные по релизам из избранного текущего пользователя",
+    "body": {
+      "type": "object"
+    }
+  },
+  {
+    "path": "/accounts/users/me/favorites",
+    "method": "post",
+    "description": "Добавляет релизы в избранное авторизованного пользователя",
+    "body": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "release_id": {
+            "type": "number"
+          }
+        },
+        "type": "object"
+      }
+    }
+  },
+  {
+    "path": "/accounts/users/me/favorites",
+    "method": "delete",
+    "description": "Удаляет релизы из избранного авторизованного пользователя",
+    "body": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "release_id": {
+            "type": "number"
+          }
+        },
+        "type": "object"
+      }
+    }
+  },
+  {
+    "path": "/accounts/users/me/profile",
+    "method": "get",
+    "description": "Возвращает данные профиля авторизованного пользователя",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/views/timecodes",
+    "method": "get",
+    "description": "Возвращает таймкоды по прогрессу просмотренных эпизодов",
+    "body": null
+  },
+  {
+    "path": "/accounts/users/me/views/timecodes",
+    "method": "post",
+    "description": "Обновляет таймкоды просмотренных эпизодов",
+    "body": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "time": {
+            "type": "number"
+          },
+          "is_watched": {
+            "type": "boolean"
+          },
+          "release_episode_id": {
+            "type": "string",
+            "maxLength": 36
+          }
+        },
+        "type": "object"
+      }
+    }
+  },
+  {
+    "path": "/accounts/users/me/views/timecodes",
+    "method": "delete",
+    "description": "Удаляет данные по таймкодам просмотров для указанных эпизодов",
+    "body": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "release_episode_id": {
+            "type": "string",
+            "maxLength": 36
+          }
+        },
+        "type": "object"
+      }
+    }
+  },
+  {
+    "path": "/ads/vasts",
+    "method": "get",
+    "description": "Возвращает спиоск со всеми доступными для использования VAST кампаниями",
+    "body": null
+  },
+  {
+    "path": "/ads/vasts/chain",
+    "method": "get",
+    "description": "Возвращает XML страницу со всеми доступными для использования VAST кампаниями",
+    "body": null
+  },
+  {
+    "path": "/anime/catalog/releases",
+    "method": "get",
+    "description": "Возвращает список релизов по заданными параметрам",
+    "body": null
+  },
+  {
+    "path": "/anime/catalog/releases",
+    "method": "post",
+    "description": "Возвращает список релизов по заданными параметрам",
+    "body": {
+      "type": "object"
+    }
+  },
+  {
+    "path": "/anime/catalog/references/age-ratings",
+    "method": "get",
+    "description": "Возвращает список возможных возрастных рейтингов в каталоге",
+    "body": null
+  },
+  {
+    "path": "/anime/catalog/references/genres",
+    "method": "get",
+    "description": "Возвращает список всех жанров в каталоге",
+    "body": null
+  },
+  {
+    "path": "/anime/catalog/references/production-statuses",
+    "method": "get",
+    "description": "Возвращает список возможных статусов озвучки релиза в каталоге",
+    "body": null
+  },
+  {
+    "path": "/anime/catalog/references/publish-statuses",
+    "method": "get",
+    "description": "Возвращает список возможных статусов выхода релиза в каталоге",
+    "body": null
+  },
+  {
+    "path": "/anime/catalog/references/seasons",
+    "method": "get",
+    "description": "Возвращает список возможных сезонов релизов в каталоге",
+    "body": null
+  },
+  {
+    "path": "/anime/catalog/references/sorting",
+    "method": "get",
+    "description": "Возвращает список возможных типов сорировок в каталоге",
+    "body": null
+  },
+  {
+    "path": "/anime/catalog/references/types",
+    "method": "get",
+    "description": "Возвращает список возможных типов релизов в каталоге",
+    "body": null
+  },
+  {
+    "path": "/anime/catalog/references/years",
+    "method": "get",
+    "description": "Возвращает список годов в каталоге",
+    "body": null
+  },
+  {
+    "path": "/anime/franchises",
+    "method": "get",
+    "description": "Возвращает список франшиз.",
+    "body": null
+  },
+  {
+    "path": "/anime/franchises/{franchiseId}",
+    "method": "get",
+    "description": "Возвращает данные франшизы",
+    "body": null
+  },
+  {
+    "path": "/anime/franchises/random",
+    "method": "get",
+    "description": "Возвращает список случайных франшиз.",
+    "body": null
+  },
+  {
+    "path": "/anime/franchises/release/{releaseId}",
+    "method": "get",
+    "description": "Возвращает список франшиз, в которых участвует релиз",
+    "body": null
+  },
+  {
+    "path": "/anime/genres",
+    "method": "get",
+    "description": "Возвращает список всех жанров",
+    "body": null
+  },
+  {
+    "path": "/anime/genres/{genreId}",
+    "method": "get",
+    "description": "Возвращает данные по жанры",
+    "body": null
+  },
+  {
+    "path": "/anime/genres/random",
+    "method": "get",
+    "description": "Возвращает список случайных жанров",
+    "body": null
+  },
+  {
+    "path": "/anime/genres/{genreId}/releases",
+    "method": "get",
+    "description": "Возвращает список всех релизов жанра",
+    "body": null
+  },
+  {
+    "path": "/anime/releases/latest",
+    "method": "get",
+    "description": "Возвращает данные по последним релизам",
+    "body": null
+  },
+  {
+    "path": "/anime/releases/random",
+    "method": "get",
+    "description": "Возвращает данные по случайным релизам",
+    "body": null
+  },
+  {
+    "path": "/anime/releases/{aliasOrId}",
+    "method": "get",
+    "description": "Возвращает данные по релизу",
+    "body": null
+  },
+  {
+    "path": "/anime/releases/{aliasOrId}/members",
+    "method": "get",
+    "description": "Возвращает данные по участникам релиза",
+    "body": null
+  },
+  {
+    "path": "/anime/releases/episodes/{releaseEpisodeId}",
+    "method": "get",
+    "description": "Возвращает данные по эпизоду",
+    "body": null
+  },
+  {
+    "path": "/anime/schedule/now",
+    "method": "get",
+    "description": "Возвращает список релизов в расписании на текущую дату",
+    "body": null
+  },
+  {
+    "path": "/anime/schedule/week",
+    "method": "get",
+    "description": "Возвращает список релизов в расписании на текущую неделю",
+    "body": null
+  },
+  {
+    "path": "/anime/torrents",
+    "method": "get",
+    "description": "Возвращает данные по последним торрентам",
+    "body": null
+  },
+  {
+    "path": "/anime/torrents/{hashOrId}",
+    "method": "get",
+    "description": "Возвращает данные по торренту",
+    "body": null
+  },
+  {
+    "path": "/anime/torrents/{hashOrId}/file",
+    "method": "get",
+    "description": "Возвращает торрент-файл",
+    "body": null
+  },
+  {
+    "path": "/anime/torrents/release/{releaseId}",
+    "method": "get",
+    "description": "Возвращает данные по торрентам релиза",
+    "body": null
+  },
+  {
+    "path": "/anime/torrents/rss",
+    "method": "get",
+    "description": "Возвращает данные по последним торрентам в виде XML документа",
+    "body": null
+  },
+  {
+    "path": "/anime/torrents/rss/release/{releaseId}",
+    "method": "get",
+    "description": "Возвращает данные по торрентам релизам в виде RSS ленты",
+    "body": null
+  },
+  {
+    "path": "/app/search/releases",
+    "method": "get",
+    "description": "Возвращает данные по релизам, которые удовлетворяют поисковому запросу",
+    "body": null
+  },
+  {
+    "path": "/media/promotions",
+    "method": "get",
+    "description": "Возвращает список промо-материалов или рекламные кампании в случном порядке",
+    "body": null
+  },
+  {
+    "path": "/media/videos",
+    "method": "get",
+    "description": "Возвращает список последних видео-роликов",
+    "body": null
+  },
+  {
+    "path": "/teams/",
+    "method": "get",
+    "description": "Возвращает список всех команд",
+    "body": null
+  },
+  {
+    "path": "/teams/roles",
+    "method": "get",
+    "description": "Возвращает список всех ролей в командах",
+    "body": null
+  },
+  {
+    "path": "/teams/users",
+    "method": "get",
+    "description": "Возвращает список всех анилибрийцов с указанием команды и своих ролей",
+    "body": null
+  }
+]
