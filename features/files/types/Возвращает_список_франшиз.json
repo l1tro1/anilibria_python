@@ -1,0 +1,92 @@
+{
+  "type": "array",
+  "items": {
+    "allOf": [
+      {
+        "properties": {
+          "id": {
+            "description": "Идентификатор франшизы",
+            "type": "string",
+            "example": "116e17d2-e89f-4ffc-bfa4-b45ae4c41e92"
+          },
+          "name": {
+            "description": "Название франшизы (на русском)",
+            "type": "string",
+            "example": "Re: Жизнь в другом мире с нуля"
+          },
+          "name_english": {
+            "description": "Название франшизы (на английском)",
+            "type": "string",
+            "example": "Re: Zero kara Hajimeru Isekai Seikatsu"
+          },
+          "rating": {
+            "description": "Рейтинг франшизы",
+            "type": ["number", "null"],
+            "example": 8.45
+          },
+          "last_year": {
+            "description": "Год последнего релиза",
+            "type": "integer",
+            "example": 2023
+          },
+          "first_year": {
+            "description": "Год первого релиза",
+            "type": "integer",
+            "example": 2010
+          },
+          "total_releases": {
+            "description": "Количество релизов",
+            "type": "integer",
+            "example": 10
+          },
+          "total_episodes": {
+            "description": "Общее количество эпизодов",
+            "type": "integer",
+            "example": 25
+          },
+          "total_duration": {
+            "description": "Общая длительность франшизы",
+            "type": ["string", "null"],
+            "example": "2 дня 5 часов"
+          },
+          "total_duration_in_seconds": {
+            "description": "Общая длительность франшизы в секундах",
+            "type": "integer",
+            "example": 183600
+          },
+          "image": {
+            "description": "Превью франшизы",
+            "properties": {
+              "preview": {
+                "description": "Ссылка изображение",
+                "type": ["string", "null"],
+                "example": "/...GoH5bzLFS7A21DzacgUApScj7qJY1iMz.jpg"
+              },
+              "thumbnail": {
+                "description": "Ссылка изображение",
+                "type": ["string", "null"],
+                "example": "/.../GoH5bzLFS7A21DzacgUApScj7qJY1iMz.jpg"
+              },
+              "optmized": {
+                "properties": {
+                  "preview": {
+                    "description": "Ссылка изображение",
+                    "type": "string",
+                    "example": "/...GoH5bzLFS7A21DzacgUApScj7qJY1iMz.webp"
+                  },
+                  "thumbnail": {
+                    "description": "Ссылка изображение",
+                    "type": "string",
+                    "example": "/.../GoH5bzLFS7A21DzacgUApScj7qJY1iMz.webp"
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          }
+        }
+      }
+    ]
+  }
+}

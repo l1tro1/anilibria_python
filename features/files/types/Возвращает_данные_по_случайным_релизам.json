@@ -14,7 +14,7 @@
             "description": "Тип",
             "properties": {
               "value": {
-                "type": "string",
+                "type": ["string", "null"],
                 "example": "TV"
               },
               "description": {
@@ -59,7 +59,7 @@
             "description": "Сезон",
             "properties": {
               "value": {
-                "type": "string",
+                "type": ["string", "null"],
                 "example": "autumn"
               },
               "description": {
@@ -98,7 +98,7 @@
           },
           "fresh_at": {
             "description": "Дата поднятия релиза",
-            "type": "string",
+            "type": ["string", "null"],
             "format": "date",
             "example": "2019-12-29T23:06:39+00:00"
           },

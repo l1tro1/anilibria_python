@@ -27,7 +27,7 @@ def open_search_filter(context, endpoint_description):
     rest = AnilibriaRest()
     context.logger.info(f"Выполняется запрос по пути {endpoint_data['path']}")
     result = getattr(rest, endpoint_data['method'])(endpoint_data['path'])
-    json_name = endpoint_data['description'].replace(' ', '_')
+    json_name = endpoint_data['description'].replace(' ', '_').replace('.', '')
     rest_response = {"result": result,
                      "json_name": json_name}
     context.logger.info("Данные запроса успешно получены.")
