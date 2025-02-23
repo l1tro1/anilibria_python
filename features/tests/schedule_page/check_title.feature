@@ -1,6 +1,7 @@
 # encoding: UTF-8
 # language: ru
 
+@fixture.browser
 Функция: Проверка описания
 
   Сценарий: Проверка описания Расписания

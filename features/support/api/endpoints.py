@@ -8,7 +8,7 @@ class ElementCountError(Exception):
 
 
 class Endpoints:
-    def __init__(self, file_path: str = 'files/anilibria_api_endpoints.json'):
+    def __init__(self, file_path: str = 'features/files/anilibria_api_endpoints.json'):
         """
         Инициализация класса Endpoints.
 

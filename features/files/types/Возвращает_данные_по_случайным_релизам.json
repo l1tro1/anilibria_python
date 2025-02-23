@@ -1,0 +1,424 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "allOf": [
+      {
+        "properties": {
+          "id": {
+            "description": "Идентификатор релиза",
+            "type": "number",
+            "example": "7439"
+          },
+          "type": {
+            "description": "Тип",
+            "properties": {
+              "value": {
+                "type": "string",
+                "example": "TV"
+              },
+              "description": {
+                "type": "string",
+                "example": "ТВ"
+              }
+            },
+            "type": "object"
+          },
+          "year": {
+            "description": "Год",
+            "type": "number",
+            "example": "2018"
+          },
+          "name": {
+            "description": "Название релиза",
+            "properties": {
+              "main": {
+                "type": "string",
+                "example": "Мастера Меча Онлайн: Алисизация"
+              },
+              "english": {
+                "type": "string",
+                "example": "Sword Art Online: Alicization"
+              },
+              "alternative": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "example": "Война в Андерворлде, War of Underworld"
+              }
+            },
+            "type": "object"
+          },
+          "alias": {
+            "description": "Ссылка на релиз",
+            "type": "string",
+            "example": "sword-art-online-alicization"
+          },
+          "season": {
+            "description": "Сезон",
+            "properties": {
+              "value": {
+                "type": "string",
+                "example": "autumn"
+              },
+              "description": {
+                "type": "string",
+                "example": "Осень"
+              }
+            },
+            "type": "object"
+          },
+          "poster": {
+            "description": "Постер",
+            "properties": {
+              "src": {
+                "type": "string",
+                "example": "/storage/releases/posters/7439/QdCyM3mdXsUIfXtR.jpg"
+              },
+              "thumbnail": {
+                "type": "string",
+                "example": "/storage/releases/posters/7439/QdCyM3mdXsUIfXtR__3970bbec8d96605f60e92d1af21be963.jpg"
+              },
+              "optimized": {
+                "properties": {
+                  "src": {
+                    "type": "string",
+                    "example": "/storage/releases/posters/7439/QdCyM3mdXsUIfXtR__231400294e84de4d2ef108eb034c7cce.webp"
+                  },
+                  "thumbnail": {
+                    "type": "string",
+                    "example": "/storage/releases/posters/7439/QdCyM3mdXsUIfXtR__754b7d4317b2760d5ddadcb0ad01501e.webp"
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          },
+          "fresh_at": {
+            "description": "Дата поднятия релиза",
+            "type": "string",
+            "format": "date",
+            "example": "2019-12-29T23:06:39+00:00"
+          },
+          "created_at": {
+            "description": "Дата создания релиза",
+            "type": "string",
+            "format": "date",
+            "example": "2019-12-29T23:06:39+00:00"
+          },
+          "updated_at": {
+            "description": "Дата обновления релиза",
+            "type": "string",
+            "format": "date",
+            "example": "2023-08-20T15:08:20+00:00"
+          },
+          "is_ongoing": {
+            "description": "Релиз в данный момент выходит в стране производства",
+            "type": "boolean",
+            "example": "false"
+          },
+          "age_rating": {
+            "description": "Возрастное ограничение",
+            "properties": {
+              "value": {
+                "type": "string",
+                "example": "R16_PLUS"
+              },
+              "label": {
+                "type": "string",
+                "example": "16+"
+              },
+              "is_adult": {
+                "type": "boolean",
+                "example": "false"
+              },
+              "description": {
+                "type": "string",
+                "example": "Для людей, достигших возраста шестнадцати лет (16+)"
+              }
+            },
+            "type": "object"
+          },
+          "publish_day": {
+            "description": "День выхода релиза",
+            "properties": {
+              "value": {
+                "type": [
+                  "string",
+                  "number"
+                ],
+                "example": "7"
+              },
+              "description": {
+                "type": "string",
+                "example": "Воскресенье"
+              }
+            },
+            "type": "object"
+          },
+          "description": {
+            "description": "Описание релиза",
+            "type": [
+              "string",
+              "null"
+            ],
+            "example": "Underworld - мир, ранее недоступный человеческому пониманию..."
+          },
+          "notification": {
+            "description": "Важная информация / Оповещение",
+            "type": [
+              "string",
+              "null"
+            ],
+            "example": "Серии выходят по воскресеньям"
+          },
+          "episodes_total": {
+            "description": "Всего эпизодов",
+            "type": [
+              "number",
+              "null"
+            ],
+            "example": "36"
+          },
+          "external_player": {
+            "description": "ссылка на внешний плеер",
+            "type": [
+              "string",
+              "null"
+            ],
+            "example": "//kodik.info/serial/19176/e15afea155a42c615158e3a743330f3c/720p?translations=false"
+          },
+          "is_in_production": {
+            "description": "Релиз в в работе / озвучивается",
+            "type": "boolean",
+            "example": "false"
+          },
+          "is_blocked_by_geo": {
+            "description": "Блокировка по геолокации",
+            "type": "boolean",
+            "example": "false"
+          },
+          "episodes_are_unknown": {
+            "description": "Известно ли сколько всего будет эпизодов?",
+            "type": "boolean",
+            "example": "true"
+          },
+          "is_blocked_by_copyrights": {
+            "description": "Релиз заблокирован правообладателем",
+            "type": "boolean",
+            "example": "false"
+          },
+          "added_in_users_favorites": {
+            "description": "Рейтинг по добавлению в коллекцию",
+            "type": "number",
+            "example": "25557"
+          },
+          "average_duration_of_episode": {
+            "description": "Средняя продолжительность серий",
+            "type": [
+              "number",
+              "null"
+            ],
+            "example": "25"
+          },
+          "genres": {
+            "type": "array",
+            "items": {
+              "allOf": [
+                {
+                  "properties": {
+                    "id": {
+                      "description": "Transform pattern",
+                      "type": "integer",
+                      "example": "21"
+                    },
+                    "name": {
+                      "type": "string",
+                      "example": "Комедия"
+                    },
+                    "total_releases": {
+                      "description": "Общее количество релизов в этом жанре",
+                      "type": "integer",
+                      "example": 10
+                    },
+                    "image": {
+                      "description": "Превью жанра",
+                      "properties": {
+                        "preview": {
+                          "description": "Ссылка изображение",
+                          "type": "string",
+                          "example": "/...GoH5bzLFS7A21DzacgUApScj7qJY1iMz.jpg"
+                        },
+                        "thumbnail": {
+                          "description": "Ссылка изображение",
+                          "type": "string",
+                          "example": "/.../GoH5bzLFS7A21DzacgUApScj7qJY1iMz.jpg"
+                        },
+                        "optmized": {
+                          "properties": {
+                            "preview": {
+                              "description": "Ссылка изображение",
+                              "type": "string",
+                              "example": "/...GoH5bzLFS7A21DzacgUApScj7qJY1iMz.webp"
+                            },
+                            "thumbnail": {
+                              "description": "Ссылка изображение",
+                              "type": "string",
+                              "example": "/.../GoH5bzLFS7A21DzacgUApScj7qJY1iMz.webp"
+                            }
+                          },
+                          "type": "object"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "latest_episode": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "description": "Идентификатор эпизода",
+                "type": "string",
+                "example": "9b5e26ee-598f-4b8b-b77e-188d3e456318"
+              },
+              "name": {
+                "description": "Название эпизода",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "example": "Пролог"
+              },
+              "ordinal": {
+                "description": "Номер эпизода. Может быть целым или дробным числом (например, 5 или 23.5)",
+                "type": "number",
+                "example": "12.5"
+              },
+              "opening": {
+                "description": "Время опенинга",
+                "properties": {
+                  "start": {
+                    "description": "Время начала опенинга. Количество секунд от начала эпизода",
+                    "type": "number",
+                    "example": "6"
+                  },
+                  "stop": {
+                    "description": "Время окончания опенинга. Количество секунд от начала эпизода",
+                    "type": "number",
+                    "example": "125"
+                  }
+                },
+                "type": "object"
+              },
+              "ending": {
+                "description": "Время эндинга",
+                "properties": {
+                  "start": {
+                    "description": "Время начала эндинга. Количество секунд от конца эпизода",
+                    "type": "number",
+                    "example": "1394"
+                  },
+                  "stop": {
+                    "description": "Время окончания эндинга. Количество секунд от конца эпизода",
+                    "type": "number",
+                    "example": "1440"
+                  }
+                },
+                "type": "object"
+              },
+              "preview": {
+                "description": "Превью эпизода",
+                "properties": {
+                  "src": {
+                    "description": "Ссылка на изображение",
+                    "type": "string",
+                    "example": "/.../dUdskg13sdfg.jpg"
+                  },
+                  "thumbnail": {
+                    "description": "Ссылка на изображение",
+                    "type": "string",
+                    "example": "/.../safiFDia72FDhs.jpg"
+                  },
+                  "optmized": {
+                    "properties": {
+                      "src": {
+                        "description": "Ссылка на изображение",
+                        "type": "string",
+                        "example": "/.../dUdskg13sdfg.webp"
+                      },
+                      "thumbnail": {
+                        "description": "Ссылка на изображение",
+                        "type": "string",
+                        "example": "/.../safiFDia72FDhs.webp"
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "type": "object"
+              },
+              "hls_480": {
+                "description": "Ссылка на поток 480p",
+                "type": "string"
+              },
+              "hls_720": {
+                "description": "Ссылка на поток 720p",
+                "type": "string"
+              },
+              "hls_1080": {
+                "description": "Ссылка на поток 1080p",
+                "type": "string"
+              },
+              "duration": {
+                "description": "Длительность эпизода в секундах",
+                "type": "number",
+                "example": "1432"
+              },
+              "rutube_id": {
+                "description": "Id эпизода на Rutube",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "example": "c6cc4d620b1d4338901770a44b3e82f4"
+              },
+              "youtube_id": {
+                "description": "Id эпизода на Youtube",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "example": "dQw4w9WgXcQ"
+              },
+              "updated_at": {
+                "description": "Дата обновления эпизода",
+                "type": "string",
+                "format": "date",
+                "example": "2021-11-25T18:46:30+00:00"
+              },
+              "sort_order": {
+                "description": "Порядковый номер эпизода для сортировки",
+                "type": "number",
+                "example": "12"
+              },
+              "name_english": {
+                "description": "Название эпизода на английском",
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "example": "Prologue"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}
